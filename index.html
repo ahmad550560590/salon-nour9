@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>كوافيرة نور - صالون نسائي</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Tajawal', Arial, sans-serif;
+      margin: 0;
+      background: #fff8f6;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(120deg, #e91e63 60%, #f8bbd0 100%);
+      color: #fff;
+      padding: 2rem 0 1rem 0;
+      text-align: center;
+      box-shadow: 0 4px 24px #e91e6322;
+      position: relative;
+    }
+    header h1 {
+      font-size: 2.4em;
+      margin: 0 0 0.5rem 0;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+    header p {
+      font-size: 1.2em;
+      margin: 0 0 1rem 0;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+    nav {
+      margin: 1rem 0 0.5rem 0;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 1.2rem;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #e91e63;
+      text-decoration: underline;
+    }
+    .salon-logo {
+      width: 90px;
+      margin: 1rem auto 0.5rem auto;
+      display: block;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 2px 8px #e91e6322;
+      background: #fff;
+    }
+    .section {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px #e91e6322;
+      padding: 2rem 1.5rem;
+    }
+    .section h2 {
+      color: #e91e63;
+      margin-bottom: 1rem;
+      text-align: center;
+      font-size: 2em;
+    }
+    /* خدمات */
+    .services-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .service-item {
+      background: #fff0f6;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px #e91e6322;
+      padding: 1.2rem 1rem;
+      width: 220px;
+      max-width: 95vw;
+      text-align: center;
+      font-size: 1.08em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s;
+    }
+    .service-item:hover {
+      transform: scale(1.04);
+      box-shadow: 0 4px 16px #e91e6388;
+    }
+    .service-item i {
+      color: #e91e63;
+      font-size: 2em;
+      margin-bottom: 0.5rem;
+    }
+    /* معرض الصور */
+    .gallery-section {
+      background: #fff0f6;
+      margin-top: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px #e91e6322;
+      padding: 2rem 1.5rem;
+      max-width: 900px;
+    }
+    .gallery-section h2 {
+      color: #e91e63;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    .gallery-img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px #e91e6322;
+      border: 3px solid #fff;
+      background: #fff;
+      transition: box-shadow 0.2s;
+    }
+    .gallery-img:hover {
+      box-shadow: 0 4px 16px #e91e6388;
+      border: 3px solid #e91e63;
+    }
+    /* جدول الأسعار */
+    .prices-section {
+      background: #ffe0f0;
+      margin-top: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px #e91e6322;
+      padding: 2rem 1.5rem;
+      max-width: 900px;
+    }
+    .prices-section h2 {
+      color: #e91e63;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .prices-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px #e91e6322;
+      margin: 0 auto;
+    }
+    .prices-table th, .prices-table td {
+      padding: 0.8em;
+      text-align: center;
+      border-bottom: 1px solid #f8bbd0;
+    }
+    .prices-table th {
+      background: #e91e63;
+      color: #fff;
+      font-size: 1.1em;
+    }
+    .prices-table tr:last-child td {
+      border-bottom: none;
+    }
+    /* باقي التنسيقات كما في النسخة السابقة ... */
+    .reviews-list {
+      max-width: 700px;
+      margin: 1.5rem auto 0 auto;
+      padding: 0;
+      list-style: none;
+    }
+    .review-item {
+      background: #fff0f6;
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1rem;
+      color: #444;
+      box-shadow: 0 2px 8px #e91e6322;
+    }
+    .review-stars {
+      color: #ffd700;
+      font-size: 1.2em;
+      margin-bottom: 0.3em;
+      display: block;
+    }
+    .booking-form {
+      max-width: 420px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px #e91e6322;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .booking-form input, .booking-form select, .booking-form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+      background: #f8bbd0;
+      color: #333;
+    }
+    .booking-form button {
+      width: 100%;
+      background: #e91e63;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 0.7rem;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .booking-form button:hover {
+      background: #ad1457;
+    }
+    .booking-status {
+      margin-top: 0.7rem;
+      font-weight: bold;
+      color: #008000;
+    }
+    .offers-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .offer-item {
+      background: #ffe0f0;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px #e91e6322;
+      padding: 1.2rem 1rem;
+      width: 220px;
+      max-width: 95vw;
+      text-align: center;
+      font-size: 1.08em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .offer-item i {
+      color: #e91e63;
+      font-size: 2em;
+      margin-bottom: 0.5rem;
+    }
+    .faq-list {
+      max-width: 700px;
+      margin: 1.5rem auto 0 auto;
+      padding: 0;
+      list-style: none;
+    }
+    .faq-q {
+      font-weight: bold;
+      color: #e91e63;
+      cursor: pointer;
+      margin-bottom: 0.3rem;
+      background: #fff0f6;
+      border-radius: 8px;
+      padding: 0.7rem 1rem;
+      transition: background 0.2s;
+    }
+    .faq-q.open {
+      background: #ffeaea;
+    }
+    .faq-a {
+      display: none;
+      color: #444;
+      background: #f5f5f5;
+      border-radius: 8px;
+      padding: 0.7rem 1rem;
+      margin-bottom: 1rem;
+    }
+    .faq-q.open + .faq-a {
+      display: block;
+    }
+    .contact-section {
+      max-width: 500px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px #e91e6322;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .contact-section h2 {
+      color: #e91e63;
+      margin-bottom: 1rem;
+    }
+    .address {
+      font-size: 1.1em;
+      margin-bottom: 1rem;
+      color: #444;
+    }
+    .social-links {
+      text-align: center;
+      margin: 1.5rem 0 0.5rem 0;
+    }
+    .social-links a {
+      color: #e91e63;
+      font-size: 2em;
+      margin: 0 0.5em;
+      transition: color 0.2s;
+    }
+    .social-links a:hover {
+      color: #333;
+    }
+    .map-box {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .map-box iframe {
+      width: 95%;
+      max-width: 400px;
+      height: 220px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px #e91e6322;
+    }
+    .tips-list {
+      max-width: 700px;
+      margin: 1.5rem auto 0 auto;
+      padding: 0;
+      list-style: disc inside;
+      color: #ad1457;
+      font-size: 1.08em;
+    }
+    .team-section {
+      max-width: 500px;
+      margin: 2rem auto;
+      background: #fff0f6;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px #e91e6322;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .team-section img {
+      width: 90px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 3px solid #e91e63;
+    }
+    .team-section h3 {
+      margin: 0.5rem 0 0.2rem 0;
+      color: #e91e63;
+    }
+    .team-section p {
+      color: #444;
+      font-size: 1.08em;
+    }
+    @media (max-width: 600px) {
+      .section, .gallery-section, .prices-section, .contact-section, .team-section { padding: 1rem 0.5rem; }
+      .salon-logo { width: 60px; }
+      .services-list, .offers-list, .gallery-grid { flex-direction: column; align-items: center; }
+      .service-item, .offer-item { width: 95vw; }
+      .gallery-img { width: 160px; height: 160px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/2922/2922561.png" alt="شعار صالون نور" class="salon-logo">
+    <h1>كوافيرة نور</h1>
+    <p>صالون نسائي لجميع خدمات التجميل</p>
+    <nav>
+      <a href="#services">الخدمات</a>
+      <a href="#gallery">معرض الصور</a>
+      <a href="#prices">الأسعار</a>
+      <a href="#offers">العروض</a>
+      <a href="#booking">حجز موعد</a>
+      <a href="#reviews">آراء الزبونات</a>
+      <a href="#faq">الأسئلة الشائعة</a>
+      <a href="#tips">نصائح الجمال</a>
+      <a href="#team">فريق العمل</a>
+      <a href="#contact">التواصل</a>
+      <a href="#map">الموقع</a>
+    </nav>
+  </header>
+
+  <!-- الخدمات -->
+  <section class="section" id="services">
+    <h2>خدماتنا</h2>
+    <ul class="services-list">
+      <li class="service-item">
+        <i class="fas fa-cut"></i>
+        قص وتصفيف الشعر
+      </li>
+      <li class="service-item">
+        <i class="fas fa-brush"></i>
+        صبغات الشعر وميش
+      </li>
+      <li class="service-item">
+        <i class="fas fa-spa"></i>
+        حمام زيت وكيراتين
+      </li>
+      <li class="service-item">
+        <i class="fas fa-air-freshener"></i>
+        تسريحات ومناسبات
+      </li>
+      <li class="service-item">
+        <i class="fas fa-magic"></i>
+        مكياج عرائس وسهرات
+      </li>
+      <li class="service-item">
+        <i class="fas fa-hand-sparkles"></i>
+        منيكير وبديكير
+      </li>
+      <li class="service-item">
+        <i class="fas fa-eye"></i>
+        تركيب رموش وحواجب
+      </li>
+      <li class="service-item">
+        <i class="fas fa-spray-can"></i>
+        تنظيف بشرة وماسك
+      </li>
+      <li class="service-item">
+        <i class="fas fa-scissors"></i>
+        إزالة شعر (شمع/حلاوة)
+      </li>
+      <li class="service-item">
+        <i class="fas fa-gem"></i>
+        عناية بالأظافر
+      </li>
+      <li class="service-item">
+        <i class="fas fa-user-friends"></i>
+        تجهيز عرائس بالكامل
+      </li>
+      <li class="service-item">
+        <i class="fas fa-heart"></i>
+        خدمات أخرى حسب الطلب
+      </li>
+    </ul>
+  </section>
+
+  <!-- معرض الصور -->
+  <section class="gallery-section" id="gallery">
+    <h2>معرض قصات الشعر</h2>
+    <div class="gallery-grid">
+      <img class="gallery-img" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="قصة شعر 1">
+      <img class="gallery-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="قصة شعر 2">
+      <img class="gallery-img" src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80" alt="قصة شعر 3">
+      <img class="gallery-img" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="قصة شعر 4">
+      <img class="gallery-img" src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="قصة شعر 5">
+      <img class="gallery-img" src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80" alt="قصة شعر 6">
+    </div>
+  </section>
+
+  <!-- الأسعار -->
+  <section class="prices-section" id="prices">
+    <h2>جدول الأسعار</h2>
+    <table class="prices-table">
+      <thead>
+        <tr>
+          <th>الخدمة</th>
+          <th>السعر (ل.س)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>قص شعر</td>
+          <td>20,000</td>
+        </tr>
+        <tr>
+          <td>تصفيف شعر</td>
+          <td>15,000</td>
+        </tr>
+        <tr>
+          <td>صبغة شعر</td>
+          <td>35,000</td>
+        </tr>
+        <tr>
+          <td>ميش</td>
+          <td>40,000</td>
+        </tr>
+        <tr>
+          <td>حمام زيت/كيراتين</td>
+          <td>50,000</td>
+        </tr>
+        <tr>
+          <td>تسريحة مناسبة</td>
+          <td>25,000</td>
+        </tr>
+        <tr>
+          <td>مكياج عروس</td>
+          <td>60,000</td>
+        </tr>
+        <tr>
+          <td>مكياج سهرة</td>
+          <td>30,000</td>
+        </tr>
+        <tr>
+          <td>منيكير/بديكير</td>
+          <td>10,000</td>
+        </tr>
+        <tr>
+          <td>تنظيف بشرة</td>
+          <td>18,000</td>
+        </tr>
+        <tr>
+          <td>إزالة شعر (شمع/حلاوة)</td>
+          <td>12,000</td>
+        </tr>
+        <tr>
+          <td>تركيب رموش</td>
+          <td>8,000</td>
+        </tr>
+        <tr>
+          <td>عناية بالأظافر</td>
+          <td>10,000</td>
+        </tr>
+        <tr>
+          <td>تجهيز عرائس بالكامل</td>
+          <td>120,000</td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="color:#ad1457;text-align:center;margin-top:1em;">* الأسعار تقريبية وقابلة للتغيير حسب الطلب</div>
+  </section>
+
+  <!-- العروض -->
+  <section class="section" id="offers">
+    <h2>عروضنا الخاصة</h2>
+    <ul class="offers-list">
+      <li class="offer-item">
+        <i class="fas fa-percent"></i>
+        خصم 20% على صبغات الشعر كل يوم اثنين
+      </li>
+      <li class="offer-item">
+        <i class="fas fa-gift"></i>
+        باقة عروس شاملة بسعر مميز
+      </li>
+      <li class="offer-item">
+        <i class="fas fa-spa"></i>
+        جلسة تنظيف بشرة مجانية عند حجز كيراتين
+      </li>
+      <li class="offer-item">
+        <i class="fas fa-users"></i>
+        خصم جماعي للمناسبات (3 أشخاص وأكثر)
+      </li>
+    </ul>
+  </section>
+
+  <!-- حجز موعد -->
+  <form class="booking-form" id="booking" onsubmit="bookNow(event)">
+    <h2>احجزي موعدك الآن</h2>
+    <input type="text" id="name" placeholder="الاسم" required>
+    <input type="tel" id="phone" placeholder="رقم الهاتف" required>
+    <select id="service" required>
+      <option value="">اختاري الخدمة</option>
+      <option>قص وتصفيف الشعر</option>
+      <option>صبغات الشعر وميش</option>
+      <option>حمام زيت وكيراتين</option>
+      <option>تسريحات ومناسبات</option>
+      <option>مكياج عرائس وسهرات</option>
+      <option>منيكير وبديكير</option>
+      <option>تركيب رموش وحواجب</option>
+      <option>تنظيف بشرة وماسك</option>
+      <option>إزالة شعر (شمع/حلاوة)</option>
+      <option>عناية بالأظافر</option>
+      <option>تجهيز عرائس بالكامل</option>
+      <option>خدمة أخرى</option>
+    </select>
+    <input type="date" id="date" required>
+    <textarea id="notes" placeholder="ملاحظات إضافية (اختياري)"></textarea>
+    <button type="submit">إرسال الطلب</button>
+    <div class="booking-status" id="bookingStatus"></div>
+  </form>
+
+  <!-- آراء الزبونات -->
+  <section class="section" id="reviews">
+    <h2>آراء الزبونات</h2>
+    <ul class="reviews-list">
+      <li class="review-item">
+        <span class="review-stars">★★★★★</span>
+        "أحلى صالون ونور أيدها خفيفة وذوق. شكراً على التسريحة الرائعة!"<br>
+        <b>- سارة من إدلب</b>
+      </li>
+      <li class="review-item">
+        <span class="review-stars">★★★★★</span>
+        "المكان نظيف والخدمة ممتازة. أنصح كل البنات يجربوا!"<br>
+        <b>- ريم من أبوظهور</b>
+      </li>
+      <li class="review-item">
+        <span class="review-stars">★★★★☆</span>
+        "صبغة الشعر طلعت روعة، أكيد رح أرجع مرة تانية."<br>
+        <b>- هبة</b>
+      </li>
+    </ul>
+  </section>
+
+  <!-- الأسئلة الشائعة -->
+  <section class="section" id="faq">
+    <h2>الأسئلة الشائعة</h2>
+    <ul class="faq-list">
+      <li>
+        <div class="faq-q" onclick="toggleFaq(this)">هل أحتاج لحجز موعد مسبق؟</div>
+        <div class="faq-a">يفضل الحجز المسبق لضمان توفر الوقت المناسب لكِ.</div>
+      </li>
+      <li>
+        <div class="faq-q" onclick="toggleFaq(this)">هل يوجد خدمات خاصة للعرائس؟</div>
+        <div class="faq-a">نعم، لدينا باقات عرائس شاملة (مكياج، شعر، عناية كاملة).</div>
+      </li>
+      <li>
+        <div class="faq-q" onclick="toggleFaq(this)">ما هي طرق الدفع المتوفرة؟</div>
+        <div class="faq-a">الدفع نقداً في الصالون.</div>
+      </li>
+      <li>
+        <div class="faq-q" onclick="toggleFaq(this)">هل يوجد عروض أو خصومات؟</div>
+        <div class="faq-a">نعم، راجعي قسم العروض لمعرفة أحدث الخصومات.</div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- نصائح الجمال -->
+  <section class="section" id="tips">
+    <h2>نصائح الجمال من نور</h2>
+    <ul class="tips-list">
+      <li>قصي أطراف شعركِ كل شهرين لتحافظي على صحته ولمعانه.</li>
+      <li>استخدمي ماسك طبيعي للشعر مرة أسبوعياً.</li>
+      <li>لا تنسي واقي الشمس حتى في الشتاء للحفاظ على نضارة بشرتكِ.</li>
+      <li>شربي الماء بكثرة لتحصلي على بشرة صحية.</li>
+      <li>اختاري منتجات عناية تناسب نوع شعركِ وبشرتكِ.</li>
+    </ul>
+  </section>
+
+  <!-- فريق العمل -->
+  <section class="team-section" id="team">
+    <img src="https://cdn-icons-png.flaticon.com/512/2922/2922561.png" alt="نور">
+    <h3>نور</h3>
+    <p>خبرة أكثر من 10 سنوات في مجال التجميل والعناية بالشعر والبشرة. شغفي إسعاد كل سيدة وجعلها أكثر جمالاً وثقة بنفسها.</p>
+  </section>
+
+  <!-- العنوان والتواصل -->
+  <section class="contact-section" id="contact">
+    <h2>العنوان والتواصل</h2>
+    <div class="address">
+      <i class="fas fa-map-marker-alt"></i>
+      إدلب - أبوظهور
+    </div>
+    <div>
+      <i class="fas fa-phone"></i>
+      للحجز والاستفسار: <b>09xxxxxxxx</b>
+    </div>
+    <div class="social-links">
+      <a href="#" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+      <a href="#" title="فيسبوك"><i class="fab fa-facebook"></i></a>
+      <a href="#" title="انستغرام"><i class="fab fa-instagram"></i></a>
+    </div>
+  </section>
+
+  <!-- خريطة الموقع -->
+  <div class="map-box" id="map">
+    <iframe src="https://www.google.com/maps?q=إدلب,أبوظهور&output=embed"></iframe>
+  </div>
+
+  <script>
+    // الأسئلة الشائعة
+    function toggleFaq(el) {
+      el.classList.toggle('open');
+      const answer = el.nextElementSibling;
+      if (answer.style.display === "block") {
+        answer.style.display = "none";
+      } else {
+        answer.style.display = "block";
+      }
+    }
+    // حجز موعد
+    function bookNow(e) {
+      e.preventDefault();
+      document.getElementById('bookingStatus').textContent = "تم إرسال طلبك بنجاح! سنتواصل معكِ قريباً.";
+      setTimeout(() => {
